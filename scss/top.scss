@@ -1,0 +1,59 @@
+.wrapper__main{
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: 0 15px;
+}
+
+
+.top{
+   background-image: url('../images/expectrum-1191724.png');
+   background-size: cover;
+   padding-top: 40px;
+   text-align: center;
+   background-position: center;
+   .top__head{
+      @include header();
+   }
+   .top__text{
+      padding: 10px 0;
+      @include text();
+   }
+   .top__items{
+      display: flex;
+      justify-content: space-around;
+      flex-direction: row;
+      flex-wrap: wrap;
+      padding-top: 30px;
+      padding-bottom: 60px;
+      .top__item{
+         width: 360px;
+         height: 320px;
+         background-color: $light;
+         margin-top: 34px;
+         transition: all 0.7s;
+         border: 1px solid rgb(223, 223, 223);
+         padding: 0 20px;
+         &:hover{
+            transform: scale(1.17);
+            background-color: $blue;
+            border: none;
+            i{
+               color: $blue;
+               background-color: $light;
+            }
+            h4,p{
+               color: $light;
+            }
+         }
+         i{
+            @include icon();
+         }
+         h4{
+            @include h4();
+         }
+         p{
+            color: $grey;
+         }
+      }
+   }
+}

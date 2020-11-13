@@ -1,0 +1,125 @@
+$blue:#2e90d5;
+$light:#fff;
+$black:#000;
+$grey:#595959;
+
+
+
+@mixin header {
+   font-size: 25px;
+   text-transform: uppercase;
+   display: inline-block;
+   padding: 6px 30px;
+   border-bottom: 3px solid $black;
+}
+@mixin text {
+   width: 800px;
+   margin: 0 auto;
+   color: $grey;
+   font-size: 14px;
+   line-height: 16px;
+}
+@mixin icon {
+   font-size: 25px;
+   margin-top: 40px;
+   display: inline-block;
+   padding: 35px;
+   background-color: $blue;
+   border-radius: 50%;
+   color: $light;
+}
+@mixin h4 {
+   font-size: 16px;
+   font-family: 'Open Sans', sans-serif;
+   display: block;
+   margin-top: 25px;
+   margin-bottom: 25px;
+}
+
+
+
+
+
+*{
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+body{
+   font-family: 'Roboto', sans-serif;
+}
+
+@import "head";
+   .header{
+      background-image: linear-gradient(to top, rgba(8, 8, 8, 0.3), rgba(0, 0, 0, 0.1)), url('../images/Stockholm_Sweden_Houses_477728.jpg');
+   }
+
+@import "footer";
+
+.inner{
+   max-width: 1200px;
+   margin: 0 auto;
+   text-align: center;
+   .blog__head{
+      h2{
+         @include header();
+         padding-top: 30px;
+         margin-bottom: 20px;
+      }
+      h3{
+         @include text();
+         margin-bottom: 60px;
+      }
+   }
+   .grid{
+      text-align: left;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 400px);
+      margin-bottom: 40px;
+   }
+}
+
+.it2{
+   grid-column-start:1;
+   grid-column-end: 3;
+   grid-row-start: 1;
+   grid-row-end: 2;
+}
+
+
+.it4{
+   grid-column-start:2;
+   grid-column-end: 4;
+   grid-row-start: 2;
+   grid-row-end: 3;
+}
+
+.it5{
+   grid-column-start:1;
+   grid-column-end: 3;
+   grid-row-start: 3;
+   grid-row-end: 4;
+}
+
+.grid__item{
+   h3{
+      text-align: center;
+      text-transform: uppercase;
+      padding-top: 50px;
+      font-size: 20px;
+      color: rgba(44, 62, 80, 1);
+      text-shadow: 0px 0px 1px rgba(44, 62, 80, 1);
+   }
+   img{
+      box-shadow: 1px 1px 1px $black;
+   }
+   p{
+     padding-top: 30px; 
+     @include text();
+   }
+   &:nth-child(4){
+      padding-left: 5px;
+   }
+}

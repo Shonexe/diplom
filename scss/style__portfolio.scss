@@ -1,0 +1,131 @@
+$blue:#2e90d5;
+$light:#fff;
+$black:#000;
+$grey:#595959;
+
+
+
+@mixin header {
+   font-size: 25px;
+   text-transform: uppercase;
+   display: inline-block;
+   padding: 6px 30px;
+   border-bottom: 3px solid $black;
+}
+@mixin text {
+   width: 800px;
+   margin: 0 auto;
+   color: $grey;
+   font-size: 14px;
+   line-height: 16px;
+}
+@mixin icon {
+   font-size: 25px;
+   margin-top: 40px;
+   display: inline-block;
+   padding: 35px;
+   background-color: $blue;
+   border-radius: 50%;
+   color: $light;
+}
+@mixin h4 {
+   font-size: 16px;
+   font-family: 'Open Sans', sans-serif;
+   display: block;
+   margin-top: 25px;
+   margin-bottom: 25px;
+}
+
+
+
+
+
+*{
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+body{
+   font-family: 'Roboto', sans-serif;
+}
+
+
+@import "head";
+   .header{
+      background-image: linear-gradient(to right, rgba(8, 8, 8, 0.6), rgba(0, 0, 0, 0.6)), url('../images/DaffU6sWsAAk9Y1.jpg');
+   }
+
+@import "footer";
+   h2{
+      font-size: 50px;
+      font-weight: bold;
+      text-transform: uppercase;
+      line-height: 45px;
+      padding-bottom: 10px;
+      text-shadow: -1px 1px 1px $light;
+   }
+
+.inner__port{
+   max-width: 1200px;
+   margin: 0 auto;
+   display: flex;
+   justify-content: space-around;
+   flex-direction: row;
+   flex-wrap: wrap;
+   margin-bottom: 60px;
+   .port__item{
+      width: 260px;
+      height: 400px;
+      background-blend-mode: multiply;
+      background-image: url('../images/2TYZ_4oHn_M.jpg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-color: rgba(99, 98, 96, 0);
+      transition: all 1s ease;
+      box-shadow: 1px 1px 2px #000 ,-1px -1px 2px #000;
+      border-radius: 2px;
+      &:hover{
+         background-color: rgba(99, 98, 96, 0.9);
+      }
+      &:nth-child(2){
+         background-image: url('../images/bsvm150gS_M.jpg');
+      }
+      &:nth-child(3){
+         background-image: url('../images/V4ByG5z4ZtI.jpg');
+      }
+      .item__about{
+         border: 2px solid rgba(87, 168, 158, 1);
+         font-size: 30px;
+         color: $light;
+         text-align: center;
+         margin: 8px 5px;
+         padding-top: 170px;
+         padding-bottom: 119px;
+         opacity: 0;
+         transition: all 0.5s;
+         cursor: pointer;
+         &:hover{
+            opacity: 1;
+         }
+      }
+   }
+   
+}
+
+.header__port{
+   max-width: 1200px;
+   margin: 0 auto;
+   text-align: center;
+   h1{
+      @include header();
+      padding-top: 30px;
+      color: rgba(44, 62, 80, 1);
+      margin-bottom: 20px;
+   }
+   .port__text{
+      @include text();
+      margin-bottom: 30px;
+   }
+}

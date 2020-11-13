@@ -1,0 +1,13 @@
+.footer {
+  padding: 10px;
+  background-color: #bdbdbd;
+}
+.footer .wrapper__footer {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+.footer .wrapper__footer .footer__cop {
+  font-size: 17px;
+  font-style: italic;
+}

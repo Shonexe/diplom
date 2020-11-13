@@ -1,0 +1,57 @@
+$blue:#2e90d5;
+$light:#fff;
+$black:#000;
+$grey:#595959;
+
+
+
+@mixin header {
+   font-size: 25px;
+   text-transform: uppercase;
+   display: inline-block;
+   padding: 6px 30px;
+   border-bottom: 3px solid $black;
+}
+@mixin text {
+   width: 800px;
+   margin: 0 auto;
+   color: $grey;
+   font-size: 14px;
+   line-height: 16px;
+}
+@mixin icon {
+   font-size: 25px;
+   margin-top: 40px;
+   display: inline-block;
+   padding: 35px;
+   background-color: $blue;
+   border-radius: 50%;
+   color: $light;
+}
+@mixin h4 {
+   font-size: 16px;
+   font-family: 'Open Sans', sans-serif;
+   display: block;
+   margin-top: 25px;
+   margin-bottom: 25px;
+}
+
+
+
+
+
+*{
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+body{
+   font-family: 'Roboto', sans-serif;
+}
+
+
+@import "head";
+.header{
+   background-image: linear-gradient(to top, rgba(8, 8, 8, 0.3), rgba(0, 0, 0, 0.1)), url('../images/DaffU6sWsAAk9Y1.jpg');
+}
