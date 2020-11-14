@@ -10,7 +10,11 @@ $grey:#595959;
    text-transform: uppercase;
    display: inline-block;
    padding: 6px 30px;
-   border-bottom: 3px solid $black;
+   border-bottom: 4px solid transparent;
+border-image: linear-gradient(1deg, #000 25%, rgba(3, 176, 255, 1) 26%,rgba(3, 176, 255, 1) 74%, #000 75%, #000 100%);
+-moz-border-image: -moz-linear-gradient(1deg, #000 25%, rgba(3, 176, 255, 1) 26%,rgba(3, 176, 255, 1) 70%, #000 71%, #000 100%);
+-webkit-border-image: -webkit-linear-gradient(1deg, #000 25%, rgba(3, 176, 255, 1) 26%,rgba(3, 176, 255, 1) 70%, #000 71%, #000 100%);
+border-image-slice: 1;
 }
 @mixin text {
    width: 800px;
